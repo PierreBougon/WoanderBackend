@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 2018_05_12_184924) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "logins", force: :cascade do |t|
+    t.string "identification", null: false
+    t.string "password_digest"
+    t.string "oauth2_token", null: false
+    t.string "uid"
+    t.string "single_use_oauth2_token"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "provider"
+    t.index ["user_id"], name: "index_logins_on_user_id"
+  end
+
   create_table "post_likes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "post_id"

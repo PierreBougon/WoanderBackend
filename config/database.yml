@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: WoanderBackend_development
+  username: WoanderBackend
+  host: ''
+  password: 123
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: WoanderBackend_test
+  username: WoanderBackend
+  host: ''
+  password: 123
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,4 +88,5 @@ production:
   <<: *default
   database: WoanderBackend_production
   username: WoanderBackend
-  password: <%= ENV['WOANDERBACKEND_DATABASE_PASSWORD'] %>
+  password: 123
+  host: ''
