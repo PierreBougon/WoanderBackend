@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     if user.save && user.create_login(login_params)
       head 200
     else
-      render json: { error: user.errors.full_messages }, status: 422 # you'd actually want to return validation errors here
+      render json: { error: user.errors.full_messages }, status: 422
     end
   end
 
