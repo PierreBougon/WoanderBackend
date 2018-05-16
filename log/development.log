@@ -4505,3 +4505,68 @@ Processing by UsersController#show as */*
 Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 2.1ms)
 
 
+Started POST "/users" for 127.0.0.1 at 2018-05-16 13:44:42 +0200
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"poisson", "password"=>"[FILTERED]", "email"=>"poisson@gmail.com", "user"=>{"email"=>"poisson@gmail.com", "username"=>"poisson"}}
+Unpermitted parameter: :user
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poisson@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "poisson"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "poisson@gmail.com"], ["username", "poisson"], ["created_at", "2018-05-16 11:44:52.523433"], ["updated_at", "2018-05-16 11:44:52.523433"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."identification" = $1 LIMIT $2[0m  [["identification", "poisson"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."oauth2_token" = $1 LIMIT $2[0m  [["oauth2_token", "28e8837f7ee7276b2161593258874961542e08f82815bbea5bfe53f55fe091cc03035873cfb533248707a823751af6df5a77a50f7d6d2200bf1f9607d7433e6310bdd9d10e5c17c43c413914550bea78c5b396f33f6fd1423cf869fdcb4dc2fa816282430012387b79f38d72ca2faae25b5cfc4d2c00470ce0d5d004af"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."single_use_oauth2_token" = $1 LIMIT $2[0m  [["single_use_oauth2_token", "6c5041978eaa6cf6e866bc2c7b64968c3fbd94cb9b24fe83d681dda64b008e2081b4bbae3d982b31e2ae3fc53eaa496b1b31611e9672660a6143eb7dc22061d536297f493b016f96d2badaa95510a43421fa0b569fff2e79c63818f2f9a5744e690dc451d2fabb6a6eeb94b11904f4371df674ffd391f6371be8cc6e91"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Create (0.4ms)[0m  [1m[32mINSERT INTO "logins" ("identification", "password_digest", "oauth2_token", "single_use_oauth2_token", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["identification", "poisson"], ["password_digest", "$2a$10$XH1q4tLNIgLH4ztKhuuwxutKe63YsddK48/lLDHS7OdrVi6fsmkOG"], ["oauth2_token", "28e8837f7ee7276b2161593258874961542e08f82815bbea5bfe53f55fe091cc03035873cfb533248707a823751af6df5a77a50f7d6d2200bf1f9607d7433e6310bdd9d10e5c17c43c413914550bea78c5b396f33f6fd1423cf869fdcb4dc2fa816282430012387b79f38d72ca2faae25b5cfc4d2c00470ce0d5d004af"], ["single_use_oauth2_token", "6c5041978eaa6cf6e866bc2c7b64968c3fbd94cb9b24fe83d681dda64b008e2081b4bbae3d982b31e2ae3fc53eaa496b1b31611e9672660a6143eb7dc22061d536297f493b016f96d2badaa95510a43421fa0b569fff2e79c63818f2f9a5744e690dc451d2fabb6a6eeb94b11904f4371df674ffd391f6371be8cc6e91"], ["user_id", 31], ["created_at", "2018-05-16 11:44:52.629036"], ["updated_at", "2018-05-16 11:44:52.629036"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."user_id" = $1 LIMIT $2[0m  [["user_id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 21.1ms)
+
+
+  
+NoMethodError (undefined method `oauth2_token' for nil:NilClass):
+  
+app/controllers/users_controller.rb:12:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-05-16 13:46:36 +0200
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"poisson", "password"=>"[FILTERED]", "email"=>"poisson@gmail.com", "user"=>{"email"=>"poisson@gmail.com", "username"=>"poisson"}}
+Unpermitted parameter: :user
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poisson@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "poisson"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "poisson@gmail.com"], ["username", "poisson"], ["created_at", "2018-05-16 11:46:36.683302"], ["updated_at", "2018-05-16 11:46:36.683302"]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."identification" = $1 LIMIT $2[0m  [["identification", "poisson"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."oauth2_token" = $1 LIMIT $2[0m  [["oauth2_token", "27509dd6e11ffe175e2dc1f79f4d199d9db17db16fe557cb232c797edcbab465083858a6ee6bc0ff76b2cd2d64e031e3b123b13737f151db03b28a4cb272127f01b3916d438698e5d6a516ac38e12c3616aed14a9bfde8223fa2725c6a766fd3528a7fc63fd9b083ed8206bd86acb8f66ca07b618b4a66fc57644fcf4e"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."single_use_oauth2_token" = $1 LIMIT $2[0m  [["single_use_oauth2_token", "038e4b8a3b6ff991413d120a4500535864108d88e712372733d943cd4b709455c4c9a422d025c7c70f4025b1e2aa970d53120e3217412eacfc92ec91fc8a7ca863abc495a7d331eac9a1023a6a0920f58d9da5dd65786123ca84301314c356bc15753e5a0014396852c44083767070777bc6cd434e72a44e87b05809dd"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[36mLogin Load (0.2ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."user_id" = $1 LIMIT $2[0m  [["user_id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 107ms (Views: 12.7ms | ActiveRecord: 9.5ms)
+
+

@@ -4,9 +4,8 @@ module AuthenticationHelper
   end
 
   def authentication_header
-    token = RailsApiAuth::new(payload: { sub: current_user.login }).token
     {
-        'Authorization': "Bearer #{token}"
+      'Authorization': "Bearer #{current_user.login.oauth2_token}"
     }
   end
 end

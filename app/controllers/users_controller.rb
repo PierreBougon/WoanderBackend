@@ -1,26 +1,23 @@
 class UsersController < ApplicationController
   def show
     user = User.find_by(id: params[:id])
-    render json: user.errors.details, status: :bad_request and return unless user != nil
+    render json: { "error": "Not found" }, status: :not_found and return unless user != nil
     render json: user
   end
 
   def create
-    puts("I AM HERE")
     user = User.new(user_params)
-
     new_params = { 'identification': params[:username], 'password': params[:password] }
-
     if user.save && user.create_login(new_params)
-      head 200
+      render json: { 'access_token': user.login.oauth2_token }, head: 200
     else
-      render json: { error: user.errors.full_messages }, status: 422
+      render json: { error: user.errors.full_messages }, status: :bad_request
     end
   end
 
   private
 
   def user_params
-    params.except(:password).require(:user).permit(:username, :email, :password)
+    params.except(:password).permit(:username, :email)
   end
 end
