@@ -11,7 +11,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = current_login.user.posts.create(post_params)
+    content = post_params[:content]
+    # do something with content here
+    post = find_user(current_login).posts.create(post_params.except(:content))
+
     render json: post.errors.details, status: :bad_request and return unless post.save
     render json: post, status: :created
   end
@@ -23,8 +26,12 @@ class PostsController < ApplicationController
 
   private
 
+  def find_user(login)
+    User.find_by(id: login.user_id)
+  end
+
   def post_params
-    params.require(:post).permit(:media_type, :description, :coordinates, :content)
+    params.permit(:media_type, :description, :coordinates, :content)
   end
 
   def find_post

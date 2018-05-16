@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'ping' => 'application#ping'
+  get 'login' => 'login#login'
 
   resources :posts, only: [:index, :show, :create, :update]
   resources :users, only: [:show, :create]
