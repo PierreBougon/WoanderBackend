@@ -4353,3 +4353,155 @@ Migrating to RemovePasswordFromUsers (20180516100511)
   ↳ bin/rails:9
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started POST "/users" for 127.0.0.1 at 2018-05-16 12:09:08 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"filou", "password"=>"[FILTERED]", "email"=>"filou@gmail.com", "user"=>{"email"=>"filou@gmail.com", "username"=>"filou"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "filou@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "filou"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "filou@gmail.com"], ["username", "filou"], ["created_at", "2018-05-16 10:09:08.405936"], ["updated_at", "2018-05-16 10:09:08.405936"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mLogin Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."identification" = $1 LIMIT $2[0m  [["identification", "filou"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mLogin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."oauth2_token" = $1 LIMIT $2[0m  [["oauth2_token", "66f2b0ce76b07ae0570858c743bca90497b8dfaef579d90ded044f8a19deac912a812600f05024ae8ae0164e7a1f8bc2c509ed4e2c68c2c9ca1df6fc19468b0459c1c3c5a829ad45643a180c11928d2d22b9449eeba86655e1e602ee5650b8315aa3896c2fbc5121fed06d8a363636de9fc9e3494c493e6252c2393ac7"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mLogin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "logins" WHERE "logins"."single_use_oauth2_token" = $1 LIMIT $2[0m  [["single_use_oauth2_token", "937ac44ed5249cf09134876f0686ba7d3ae394fdc5b7fe56afdf5e5b86b053a51df836bd214d3177a93b42dbcd5fd6e0cb1547d535db22e9602b53aa14db8e8aea10011a6b081bee146727d28bf179eebf7974bb70cab67bd49c4b7a4e99f01c370ad06b761804dd1466bf5297a3067bba1aa0a94b381dfa9bcc033fb2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mLogin Create (0.4ms)[0m  [1m[32mINSERT INTO "logins" ("identification", "password_digest", "oauth2_token", "single_use_oauth2_token", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["identification", "filou"], ["password_digest", "$2a$10$Ir3M531A1unRjDK7WjzZ9Ol1tvKGTKhy3B1XSSttOT7l4VFV434CO"], ["oauth2_token", "66f2b0ce76b07ae0570858c743bca90497b8dfaef579d90ded044f8a19deac912a812600f05024ae8ae0164e7a1f8bc2c509ed4e2c68c2c9ca1df6fc19468b0459c1c3c5a829ad45643a180c11928d2d22b9449eeba86655e1e602ee5650b8315aa3896c2fbc5121fed06d8a363636de9fc9e3494c493e6252c2393ac7"], ["single_use_oauth2_token", "937ac44ed5249cf09134876f0686ba7d3ae394fdc5b7fe56afdf5e5b86b053a51df836bd214d3177a93b42dbcd5fd6e0cb1547d535db22e9602b53aa14db8e8aea10011a6b081bee146727d28bf179eebf7974bb70cab67bd49c4b7a4e99f01c370ad06b761804dd1466bf5297a3067bba1aa0a94b381dfa9bcc033fb2"], ["user_id", 30], ["created_at", "2018-05-16 10:09:08.496606"], ["updated_at", "2018-05-16 10:09:08.496606"]]
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[36mLogin Load (0.2ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."user_id" = $1 LIMIT $2[0m  [["user_id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+Completed 200 OK in 104ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:11:01 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 4.0ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Post' to association named 'users'; perhaps you misspelled it?):
+  
+app/controllers/posts_controller.rb:10:in `index'
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:11:11 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Post' to association named 'users'; perhaps you misspelled it?):
+  
+app/controllers/posts_controller.rb:10:in `index'
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:11:15 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "users" ON "users"."id" = "posts"."user_id"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 47ms (Views: 19.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:11:28 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "users" ON "users"."id" = "posts"."user_id"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:11:29 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.7ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Post' to association named 'user_id'; perhaps you misspelled it?):
+  
+app/controllers/posts_controller.rb:10:in `index'
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:11:38 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "users" ON "users"."id" = "posts"."user_id"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 43ms (Views: 12.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:12:02 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" INNER JOIN "users" ON "users"."id" = "posts"."user_id"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 36ms (Views: 11.3ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:27:10 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (1.0ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 35ms (Views: 8.8ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:27:36 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 12:27:54 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.45ms)
+Completed 200 OK in 97ms (Views: 60.3ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/users/27" for 127.0.0.1 at 2018-05-16 12:28:17 +0200
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"27"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+[active_model_serializers]   [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 27]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (20.82ms)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 2.1ms)
+
+
