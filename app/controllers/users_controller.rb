@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate!, only: [:show]
+
   def show
     user = User.find_by(id: params[:id])
     render json: { "error": "Not found" }, status: :not_found and return unless user != nil

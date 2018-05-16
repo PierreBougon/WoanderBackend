@@ -4570,3 +4570,36 @@ Unpermitted parameter: :user
 Completed 200 OK in 107ms (Views: 12.7ms | ActiveRecord: 9.5ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2018-05-16 14:43:37 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (1.1ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (9.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.65ms)
+Completed 200 OK in 155ms (Views: 32.8ms | ActiveRecord: 103.6ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2018-05-16 14:44:50 +0200
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mLogin Load (0.8ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:6
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (2.97ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.5ms)
+
+

@@ -8,24 +8,33 @@ RSpec.describe 'Users', type: :request do
       FactoryBot.create :user
     }
 
-    context 'when params are incorrect' do
-      it 'is not found' do
+    context 'when unauthenticated' do
+      it 'is unauthorized' do
         get "#{version}/users/toto"
-        expect(response).to have_http_status :not_found
+        expect(response).to have_http_status :unauthorized
       end
     end
 
-    context 'when everything is fine' do
-      it 'works' do
-        FactoryBot.create_list :post, 10, user_id: created_user.id
-        get "#{version}/users/#{created_user.id}"
-        expect(response).to be_successful
-        expect(parsed_body).to include 'username'
-        expect(parsed_body['username']).to eq created_user.username
-        expect(parsed_body).to include 'email'
-        expect(parsed_body['email']).to eq created_user.email
-        expect(parsed_body).to include 'posts'
-        expect(parsed_body['posts'].count).to eq created_user.posts.count
+    context 'when authenticated' do
+      context 'when params are incorrect' do
+        it 'is not found' do
+          get "#{version}/users/toto", headers: authentication_header
+          expect(response).to have_http_status :not_found
+        end
+      end
+
+      context 'when everything is fine' do
+        it 'works' do
+          FactoryBot.create_list :post, 10, user_id: created_user.id
+          get "#{version}/users/#{created_user.id}", headers: authentication_header
+          expect(response).to be_successful
+          expect(parsed_body).to include 'username'
+          expect(parsed_body['username']).to eq created_user.username
+          expect(parsed_body).to include 'email'
+          expect(parsed_body['email']).to eq created_user.email
+          expect(parsed_body).to include 'posts'
+          expect(parsed_body['posts'].count).to eq created_user.posts.count
+        end
       end
     end
   end
@@ -48,7 +57,7 @@ RSpec.describe 'Users', type: :request do
       it 'is an existing email' do
         created_user = FactoryBot.create :user
         params = { username: 'marc' , email: created_user.email, password: '123' }
-   
+
         post "#{version}/users", params: params
         expect(response).to have_http_status :bad_request
       end
