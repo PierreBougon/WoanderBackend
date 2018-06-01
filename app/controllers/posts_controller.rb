@@ -10,6 +10,10 @@ class PostsController < ApplicationController
     render json: Post.all
   end
 
+  def coordinates
+    render json: Post.all, each_serializer: ShortPostSerializer
+  end
+
   def create
     render json: { 'error': 'missing content' }, status: :bad_request and return unless post_params[:content] != nil
     render json: { 'error': 'wrong coordinates' }, status: :bad_request and return unless valid_coordinates(params[:coordinates]) != nil

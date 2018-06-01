@@ -4603,3 +4603,1277 @@ Processing by PostsController#show as */*
 Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/ping" for 127.0.0.1 at 2018-05-24 12:46:01 +0200
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/ping"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-05-24 12:46:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-05-24 12:46:13 +0200
+Processing by LoginController#login as HTML
+  [1m[36mLogin Load (15.9ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" IS NULL ORDER BY "logins"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Filter chain halted as :authenticate! rendered or redirected
+Completed 401 Unauthorized in 56ms (ActiveRecord: 39.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-24 12:47:03 +0200
+Processing by LoginController#login as */*
+  [1m[36mLogin Load (1.2ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 200 OK in 315ms (Views: 17.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-24 12:47:08 +0200
+Processing by LoginController#login as */*
+  [1m[36mLogin Load (1.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "bb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Filter chain halted as :authenticate! rendered or redirected
+Completed 401 Unauthorized in 3ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/token" for 127.0.0.1 at 2018-05-24 17:10:08 +0200
+Processing by Oauth2Controller#create as */*
+  Parameters: {"grant_type"=>"password", "password"=>"[FILTERED]", "username"=>"Nova"}
+  [1m[36mLogin Load (19.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."identification" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["identification", "Nova"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 200 OK in 104ms (Views: 1.9ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-24 17:10:25 +0200
+Processing by LoginController#login as */*
+  [1m[36mLogin Load (0.6ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-05-24 17:10:54 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (106.01ms)
+Completed 200 OK in 349ms (Views: 221.2ms | ActiveRecord: 79.1ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-05-24 17:11:16 +0200
+Processing by PostsController#create as */*
+  Parameters: {"media_type"=>"AR", "description"=>"ceci est un TEST pour la reunion follow up", "coordinates"=>"{{latitude}}:{{longitude}}", "content"=>"asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdasdfasdfas", "post"=>{"media_type"=>"AR", "description"=>"ceci est un TEST pour la reunion follow up", "coordinates"=>"{{latitude}}:{{longitude}}"}}
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :post
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.29ms)
+Completed 400 Bad Request in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-05-24 17:11:30 +0200
+Processing by PostsController#create as */*
+  Parameters: {"media_type"=>"AR", "description"=>"ceci est un TEST pour la reunion follow up", "coordinates"=>"-123123123:123123123", "content"=>"asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdasdfasdfas", "post"=>{"media_type"=>"AR", "description"=>"ceci est un TEST pour la reunion follow up", "coordinates"=>"-123123123:123123123"}}
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Unpermitted parameter: :post
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:52
+Unpermitted parameter: :post
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:17
+  [1m[36mPost Create (23.2ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "media_type", "media_link", "description", "created_at", "updated_at", "coordinates") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 27], ["media_type", "AR"], ["media_link", "http://localhost/files/sdfsfa"], ["description", "ceci est un TEST pour la reunion follow up"], ["created_at", "2018-05-24 15:11:30.874405"], ["updated_at", "2018-05-24 15:11:30.875203"], ["coordinates", "-123123123:123123123"]]
+  ↳ app/controllers/posts_controller.rb:17
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:19
+Unpermitted parameter: :post
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 319ms (Views: 1.0ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:36:40 +0200
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (16.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 332ms (ActiveRecord: 43.7ms)
+
+
+  
+NameError (undefined local variable or method `id' for #<PostsController:0x00000000088f2250>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:37:53 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (2.1ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (10.7ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.13ms)
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 30.0ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:38:35 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.46ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 9.1ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:40:16 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 7.0ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:40:33 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.7ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:40:47 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts"."id", "posts"."user_id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (53.77ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 20.1ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: media_link):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:41:29 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.84ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 7.2ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:41:51 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.58ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:44:43 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.45ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 8.4ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:44:51 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveModel::MissingAttributeError (missing attribute: user_id):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:44:55 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.42ms)
+Completed 200 OK in 50ms (Views: 25.5ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:44:59 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.8ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.34ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:45:00 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.54ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:45:47 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.7ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.19ms)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:46:00 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.17ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:46:27 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 3.8ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `post' for #<User::ActiveRecord_Relation:0x0000000006845f48>):
+  
+app/controllers/posts_controller.rb:10:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:46:28 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `post' for #<User::ActiveRecord_Relation:0x000000000c03f028>):
+  
+app/controllers/posts_controller.rb:10:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:46:30 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `post' for #<User::ActiveRecord_Relation:0x000000000946e200>):
+  
+app/controllers/posts_controller.rb:10:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:46:41 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `post' for #<User::ActiveRecord_Relation:0x0000000008781a10>):
+  
+app/controllers/posts_controller.rb:10:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:46:41 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.57ms)
+Completed 200 OK in 57ms (Views: 25.8ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:46:42 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.53ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:46:51 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.82ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:28 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.9ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.68ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:29 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.81ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:29 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.16ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:30 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.05ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:31 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.07ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:31 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.6ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.9ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:31 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.61ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:31 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.99ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:31 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.82ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:32 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.67ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:32 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.32ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:32 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.85ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:46 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.6ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 47ms (Views: 9.0ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 14:50:52 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (1.1ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:50:55 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.6ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:50:58 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:50:59 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:51:14 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.6ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:51:16 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 34ms (Views: 7.6ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:51:18 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 14:51:19 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 15:01:25 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.6ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.91ms)
+Completed 200 OK in 99ms (Views: 61.4ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 15:01:45 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (2.1ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered PostSerializer::ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (11.7ms)
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.1ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x0000000008e3cbc0>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 15:02:10 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.7ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered PostSerializer::ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (18.21ms)
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.4ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x0000000009e59148>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts"."id", "posts"."media_type", "posts"."coordinates" FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 15:02:39 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered PostSerializer::ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (24.36ms)
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 10.0ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x000000000a511350>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 15:04:19 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (22.83ms)
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 7.3ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x0000000006301258>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 15:04:34 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.7ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (19.72ms)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 8.9ms)
+
+
+  
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x0000000008ba1488>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:43:47 +0200
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (10.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (9.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered PostSerializer::ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (26.44ms)
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 39.4ms)
+
+
+  
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x00000000097d0588>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:44:25 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (2.0ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (39.54ms)
+Completed 200 OK in 92ms (Views: 38.4ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:45:17 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered PostSerializer::ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (19.26ms)
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 8.4ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x000000000d5921f0>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:47:43 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[active_model_serializers]   [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ShortPostSerializer with ActiveModelSerializers::Adapter::Attributes (18.04ms)
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 7.7ms)
+
+
+  
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `read_attribute_for_serialization' for #<Post::ActiveRecord_Relation:0x0000000009719068>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:48:27 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 3.9ms)
+
+
+  
+NameError (undefined local variable or method `null' for #<PostsController:0x000000000a466540>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:48:43 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `null' for #<PostsController:0x000000000a27d670>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:48:53 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `new' for :none:Symbol
+Did you mean?  next):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 18:50:11 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.9ms)
+
+
+  
+NoMethodError (undefined method `new' for :no_serializer:Symbol
+Did you mean?  next):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 18:58:37 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (F:/rendu/EIP/WoanderBackend/app/controllers/posts_controller.rb:15: syntax error, unexpected keyword_end
+  end
+  ^~~
+F:/rendu/EIP/WoanderBackend/app/controllers/posts_controller.rb:67: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:15: syntax error, unexpected keyword_end
+app/controllers/posts_controller.rb:67: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-06-01 18:59:15 +0200
+Processing by PostsController#index as */*
+  [1m[36mLogin Load (0.9ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/posts_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.19ms)
+Completed 200 OK in 117ms (Views: 61.3ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 19:02:10 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.6ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.71ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 12.6ms)
+
+
+  
+NoMethodError (undefined method `posts' for #<Post:0x0000000009289de0>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 19:04:07 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.62ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 8.0ms)
+
+
+  
+NoMethodError (undefined method `posts' for #<Post:0x000000000887d388>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 19:04:10 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (1.1ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.02ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `posts' for #<Post:0x0000000009396800>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 19:04:10 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.19ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `posts' for #<Post:0x000000000c6c6ec8>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 19:04:11 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.4ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `posts' for #<Post:0x0000000005c37710>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 19:04:11 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.5ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.26ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `posts' for #<Post:0x000000000bff9c08>):
+  
+app/controllers/posts_controller.rb:14:in `coordinates'
+Started GET "/posts/coordinates" for 127.0.0.1 at 2018-06-01 19:04:49 +0200
+Processing by PostsController#coordinates as */*
+  [1m[36mLogin Load (0.3ms)[0m  [1m[34mSELECT  "logins".* FROM "logins" WHERE "logins"."oauth2_token" = $1 ORDER BY "logins"."id" ASC LIMIT $2[0m  [["oauth2_token", "abb4c3dcb2ba2a7fa290326b97dc6d5ff081067497e81bc25b0627d40482af366d9f3a9e04e75aae82732437c918c7e2aa35e9c60ee2276b36786f39a92a12d50f1be48bbf43c2083bb88eac7ea33abf9149fad3f9c11170d369f652733af27ad1bd922677bbf0411b0c324e0339f68520cb0ec448d32767d4c0bcc643"], ["LIMIT", 1]]
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 33ms (Views: 7.6ms | ActiveRecord: 9.6ms)
+
+
