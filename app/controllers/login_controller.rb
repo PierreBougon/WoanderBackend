@@ -1,6 +1,6 @@
 class LoginController < ApplicationController
-  before_action :authenticate!
-  before_action :consume_single_use_oauth2_token, only: [:resetpassword]
+  before_action :authenticate!, only: [:login, :onetimetoken]
+  before_action :consume_single_use_oauth2_token!, only: [:resetpassword]
 
   def login
     render json: { response: 'logged' }
@@ -11,12 +11,11 @@ class LoginController < ApplicationController
   end
 
   def resetpassword
-    user = User.find_by(current_login.user_id)
-    
-    if user && user.reset_password!(params[:password])
-      render json: {status: 'ok'}, status: :ok
+    user = User.find_by(id: current_login.user_id)
+    if user&.reset_password!(params[:password])
+      render json: { status: 'ok' }, status: :ok
     else
-      render json: {error: user.errors.full_messages}, status: :unprocessable_entity
+      render json: { error: user.errors.full_messages }, status: :unprocessable_entity
     end
   end
 end
