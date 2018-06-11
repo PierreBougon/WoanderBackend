@@ -30,6 +30,7 @@ RSpec.describe 'Posts', type: :request do
     let(:created_user) do
       FactoryBot.create :user
     end
+
     context 'when unauthenticated' do
       it 'is unauthorized' do
         get "#{version}/posts/toto"
@@ -177,6 +178,40 @@ RSpec.describe 'Posts', type: :request do
           }.to change {
             Post.all.count
           }.by 1
+        end
+      end
+    end
+  end
+
+  describe 'GET /posts/coordinates' do
+
+    context 'when unauthenticated' do
+      it 'is unauthorized' do
+        get "#{version}/posts/coordinates"
+        expect(response).to have_http_status :unauthorized
+      end
+    end
+
+    context 'when authenticated' do
+      let(:created_user) do
+        FactoryBot.create :user
+      end
+
+      before {
+        FactoryBot.create_list :post, 10, user_id: created_user.id
+        get "#{version}/posts/coordinates", headers: authentication_header
+      }
+
+      it 'returns the correct number of posts' do
+        expect(response).to be_successful
+        expect(parsed_body.count).to eq 10
+      end
+
+      it 'returns minified posts' do
+        expect(response).to be_successful
+        expect(parsed_body.count).to eq 10
+        parsed_body.each do |post|
+          expect(post.keys).to eq ["id", "media_type", "coordinates"]
         end
       end
     end
