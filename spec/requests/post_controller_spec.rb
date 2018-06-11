@@ -54,8 +54,8 @@ RSpec.describe 'Posts', type: :request do
           expect(response).to be_successful
           expect(parsed_body).to include 'media_type'
           expect(parsed_body['media_type']).to eq post.media_type
-          expect(parsed_body).to include 'media_link'
-          expect(parsed_body['media_link']).to eq post.media_link
+          expect(parsed_body).to include 'content'
+          expect(parsed_body['content']).to eq post.content
           expect(parsed_body).to include 'description'
           expect(parsed_body['description']).to eq post.description
           expect(parsed_body).to include 'user'
@@ -157,8 +157,8 @@ RSpec.describe 'Posts', type: :request do
           expect(parsed_body).to include 'media_type'
           expect(parsed_body['media_type']).to eq post.media_type
 
-          expect(parsed_body).to include 'media_link'
-          expect(parsed_body['media_link']).to eq post.media_link
+          expect(parsed_body).to include 'content'
+          expect(parsed_body['content']).to eq post.content
 
           expect(post.description).to eq params[:description]
           expect(parsed_body).to include 'description'

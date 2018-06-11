@@ -18,13 +18,9 @@ class PostsController < ApplicationController
     render json: { 'error': 'missing content' }, status: :bad_request and return unless post_params[:content] != nil
     render json: { 'error': 'wrong coordinates' }, status: :bad_request and return unless valid_coordinates(params[:coordinates]) != nil
 
-    post = find_user(current_login).posts.create(post_params.except(:content))
+    post = find_user(current_login).posts.create(post_params)
 
     render json: { 'error': 'missing parameter' }, status: :bad_request and return unless post.save
-
-    content = post_params[:content]
-    # do something with content here
-
     render json: post, status: :created
   end
 

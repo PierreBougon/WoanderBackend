@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :post do
     user
-    description Faker::Lorem.paragraph
+    description Faker::Lorem.sentence
     media_type Faker::Lorem.word
     coordinates "#{Faker::Address.latitude}:#{Faker::Address.longitude}"
-    media_link Faker::Lorem.sentence
+    content Faker::Lorem.paragraph
   end
 end
