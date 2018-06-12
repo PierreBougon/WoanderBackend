@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
@@ -122,7 +124,7 @@ RSpec.describe 'Posts', type: :request do
         end
 
         it 'has wrong coordinates' do
-          params[:coordinates] = "sadfsafsadfasdfasdfaf"
+          params[:coordinates] = 'sadfsafsadfasdfasdfaf'
           post "#{version}/posts", headers: authentication_header, params: params
           expect(response).to have_http_status :bad_request
           expect(parsed_body).to include 'error'
@@ -130,7 +132,7 @@ RSpec.describe 'Posts', type: :request do
         end
 
         it 'has wrong coordinates II' do
-          params[:coordinates] = "sadfsafsad:fasdfasdfaf"
+          params[:coordinates] = 'sadfsafsad:fasdfasdfaf'
           post "#{version}/posts", headers: authentication_header, params: params
           expect(response).to have_http_status :bad_request
           expect(parsed_body).to include 'error'
@@ -138,7 +140,7 @@ RSpec.describe 'Posts', type: :request do
         end
 
         it 'has wrong coordinates World' do
-          params[:coordinates] = "-123213123123:fasdfasdfaf"
+          params[:coordinates] = '-123213123123:fasdfasdfaf'
           post "#{version}/posts", headers: authentication_header, params: params
           expect(response).to have_http_status :bad_request
           expect(parsed_body).to include 'error'
@@ -173,9 +175,9 @@ RSpec.describe 'Posts', type: :request do
         it 'creates a new post' do
           usr = FactoryBot.create :user
           FactoryBot.create_list :post, 10, user_id: usr.id
-          expect {
+          expect do
             post "#{version}/posts", headers: authentication_header, params: params
-          }.to change {
+          end.to change {
             Post.all.count
           }.by 1
         end
@@ -197,21 +199,23 @@ RSpec.describe 'Posts', type: :request do
         FactoryBot.create :user
       end
 
-      before {
+      before do
         FactoryBot.create_list :post, 10, user_id: created_user.id
         get "#{version}/posts/coordinates", headers: authentication_header
-      }
+      end
 
       it 'returns the correct number of posts' do
         expect(response).to be_successful
         expect(parsed_body.count).to eq 10
       end
 
-      it 'returns minified posts' do
+      it 'returns minified and correct posts' do
         expect(response).to be_successful
         expect(parsed_body.count).to eq 10
         parsed_body.each do |post|
-          expect(post.keys).to eq ["id", "media_type", "coordinates"]
+          expect(post.keys).to eq %w[id media_type coordinates]
+          postBase = Post.find_by(id: post['id'])
+          expect(post.values).to eq [postBase.id, postBase.media_type, postBase.coordinates]
         end
       end
     end
