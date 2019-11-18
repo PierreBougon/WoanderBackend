@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was a basic API to a prototype application meant to locate events in your city on a map and be able to react on them to create new way to go out in a city.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The group behind this project has split and we went on others projects.
